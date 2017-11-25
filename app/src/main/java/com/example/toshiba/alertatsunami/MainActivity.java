@@ -17,6 +17,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import Layout.Ajustes;
@@ -24,6 +25,10 @@ import Layout.Ayuda;
 
 public class MainActivity extends AppCompatActivity {
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 83f5cd44167bcce9dfa438dd703f45b232763c8d
     private MediaPlayer mp;
     private TextView mTextMessage;
 
@@ -70,7 +75,9 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.Ayuda) {
             FragmentManager fragmentManager = getSupportFragmentManager();
             Ayuda container1Fragment = new Ayuda();
-            fragmentManager.beginTransaction().replace(R.id.contenedor_fragments, container1Fragment).addToBackStack(null).commit();}
+            fragmentManager.beginTransaction().replace(R.id.contenedor_fragments, container1Fragment).addToBackStack(null).commit();
+
+        }
         if (id == R.id.Ajustes) {
             FragmentManager fragmentManager = getSupportFragmentManager();
             Ajustes container1Fragment = new Ajustes();
@@ -100,8 +107,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+<<<<<<< HEAD
     public void alarmaOff(View v) {
 
+=======
+
+    public void alarmaOff(View v) {
+>>>>>>> 83f5cd44167bcce9dfa438dd703f45b232763c8d
         mp.stop();
     }
 
@@ -120,6 +132,11 @@ public class MainActivity extends AppCompatActivity {
         transaction.replace(R.id.contenedor_fragments,new InicioFragment()).addToBackStack(null).commit();
     }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 83f5cd44167bcce9dfa438dd703f45b232763c8d
     public void sendNotification(View view) {
 
         NotificationCompat.Builder mBuilder =

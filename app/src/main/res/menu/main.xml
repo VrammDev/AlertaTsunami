@@ -10,6 +10,11 @@
         android:orderInCategory="100"
         android:title="Ayuda" />
     <item
+        android:id="@+id/Informacion"
+        android:orderInCategory="100"
+        android:title="Informacion"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/Ajustes"
         android:orderInCategory="100"
         android:title="Ajustes"

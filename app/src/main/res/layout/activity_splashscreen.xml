@@ -11,9 +11,9 @@
 
     <ImageView
         android:id="@+id/splash"
-        android:layout_width="280dp"
-        android:layout_height="200dp"
+        android:layout_width="330dp"
+        android:layout_height="100dp"
         android:layout_margin="7dp"
-        android:background="@drawable/vrammdev" />
+        android:background="@drawable/logooriginal1" />
 
 </LinearLayout>

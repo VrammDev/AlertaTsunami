@@ -56,7 +56,7 @@ public class splash extends Activity {
                         waited += 100;
 
                     }
-                    Intent intent = new Intent(splash.this,MainActivity.class);
+                    Intent intent = new Intent(splash.this,MapsActivity.class);
                     //EVITAR APARESCA TECLADO
                     intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     startActivity(intent);

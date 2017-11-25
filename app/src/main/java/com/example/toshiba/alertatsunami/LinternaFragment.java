@@ -1,22 +1,35 @@
 package com.example.toshiba.alertatsunami;
 
+
 import android.hardware.Camera;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
+import android.view.ViewGroup;
 
-public class Linterna extends AppCompatActivity {
+
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class LinternaFragment extends Fragment {
     FloatingActionButton boton;
-    Button retroceder;
     Camera camera;
     boolean turnon = false;
+
+
+    public LinternaFragment() {
+        // Required empty public constructor
+    }
+
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_linterna);
-        boton = (FloatingActionButton) findViewById(R.id.boton);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View obj=inflater.inflate(R.layout.fragment_linterna, container, false);
+        boton = (FloatingActionButton) obj.findViewById(R.id.boton);
 
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,6 +48,7 @@ public class Linterna extends AppCompatActivity {
                 }
             }
         });
+        return obj;
     }
 
 }

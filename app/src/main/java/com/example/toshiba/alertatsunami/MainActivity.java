@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
     public void cargar(){
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.contenedor_fragments,new PrincipalFragment()).addToBackStack(null).commit();
+        transaction.replace(R.id.contenedor_fragments,new InicioFragment()).addToBackStack(null).commit();
     }
 
 
@@ -132,12 +132,12 @@ public class MainActivity extends AppCompatActivity {
                 new NotificationCompat.Builder(this);
 
 //Create the intent that’ll fire when the user taps the notification//
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, AlertaFragment.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
 
         mBuilder.setContentIntent(pendingIntent);
 
-        mBuilder.setSmallIcon(R.drawable.ic_home_black_24dp);
+        mBuilder.setSmallIcon(R.drawable.emer);
         mBuilder.setContentTitle("Alerta De Tsunami");
         mBuilder.setContentText("Se recomienda alejarse de lugares cercanos al mar");
 

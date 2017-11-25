@@ -25,10 +25,6 @@ import Layout.Ayuda;
 
 public class MainActivity extends AppCompatActivity {
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 83f5cd44167bcce9dfa438dd703f45b232763c8d
     private MediaPlayer mp;
     private TextView mTextMessage;
 
@@ -107,13 +103,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-<<<<<<< HEAD
-    public void alarmaOff(View v) {
-
-=======
 
     public void alarmaOff(View v) {
->>>>>>> 83f5cd44167bcce9dfa438dd703f45b232763c8d
         mp.stop();
     }
 
@@ -132,11 +123,6 @@ public class MainActivity extends AppCompatActivity {
         transaction.replace(R.id.contenedor_fragments,new InicioFragment()).addToBackStack(null).commit();
     }
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 83f5cd44167bcce9dfa438dd703f45b232763c8d
     public void sendNotification(View view) {
 
         NotificationCompat.Builder mBuilder =

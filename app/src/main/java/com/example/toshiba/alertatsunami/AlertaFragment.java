@@ -15,7 +15,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
-
 import com.example.toshiba.Conexion.Conexion;
 import com.example.toshiba.adapter.CardView_Adapter_Alarma;
 import com.example.toshiba.bean.TremorBean;

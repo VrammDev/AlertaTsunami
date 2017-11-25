@@ -1,46 +1,32 @@
-<<<<<<< HEAD
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-=======
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
->>>>>>> 83f5cd44167bcce9dfa438dd703f45b232763c8d
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:background="@color/colornegro"
     tools:context="com.example.toshiba.alertatsunami.AlertaFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-<<<<<<< HEAD
         android:layout_width="550px"
         android:layout_height="70px"
         android:layout_marginStart="50dp"
         android:layout_marginTop="30dp"
-        android:textSize="18sp"
+        android:text="HERRAMIENTAS DE EMERGENCIA"
         android:textColor="#fff"
-        android:text="HERRAMIENTAS DE EMERGENCIA" />
+        android:textSize="18sp" />
 
     <android.support.design.widget.FloatingActionButton
-=======
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="10dp"
-        android:text="HERRAMIENTAS DE EMERGENCIA" />
-    <Button
->>>>>>> 83f5cd44167bcce9dfa438dd703f45b232763c8d
         android:id="@+id/btnoff"
         android:layout_width="200px"
         android:layout_height="200px"
         android:layout_marginStart="140dp"
-<<<<<<< HEAD
         android:layout_marginTop="80dp"
         android:onClick="alarmaOff"
-        android:text="APAGAR ALARMA"
         android:src="@drawable/apagado"
-        tools:ignore="MissingConstraints,OnClick"
-        />
+        android:text="APAGAR ALARMA"
+        tools:ignore="MissingConstraints,OnClick" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/boton"
@@ -52,12 +38,5 @@
         android:src="@drawable/linterna"
         app:borderWidth="0dp"
         app:layout_anchorGravity="bottom|right|end" />
-=======
-        android:layout_marginTop="50dp"
-        android:onClick="alarmaOff"
-        android:text="Apagar Alarma"
-        tools:ignore="MissingConstraints,OnClick"
-        />
->>>>>>> 83f5cd44167bcce9dfa438dd703f45b232763c8d
 
-</RelativeLayout>
+</FrameLayout>

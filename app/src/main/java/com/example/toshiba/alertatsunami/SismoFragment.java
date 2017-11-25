@@ -82,4 +82,6 @@ public class SismoFragment extends Fragment {
             progressDialog.dismiss();
         }
     }
+
+
 }

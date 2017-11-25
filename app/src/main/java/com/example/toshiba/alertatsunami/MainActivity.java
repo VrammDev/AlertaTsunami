@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
                 new NotificationCompat.Builder(this);
 
 //Create the intent that’ll fire when the user taps the notification//
-        Intent intent = new Intent(this, AlertaFragment.class);
+        Intent intent = new Intent(this, MainActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
 
         mBuilder.setContentIntent(pendingIntent);

@@ -1,17 +1,23 @@
 package com.example.toshiba.alertatsunami;
 
 import android.app.AlertDialog;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import Layout.Ajustes;
@@ -19,6 +25,8 @@ import Layout.Ayuda;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    private MediaPlayer mp;
     private TextView mTextMessage;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -64,7 +72,9 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.Ayuda) {
             FragmentManager fragmentManager = getSupportFragmentManager();
             Ayuda container1Fragment = new Ayuda();
-            fragmentManager.beginTransaction().replace(R.id.contenedor_fragments, container1Fragment).addToBackStack(null).commit();}
+            fragmentManager.beginTransaction().replace(R.id.contenedor_fragments, container1Fragment).addToBackStack(null).commit();
+
+        }
         if (id == R.id.Ajustes) {
             FragmentManager fragmentManager = getSupportFragmentManager();
             Ajustes container1Fragment = new Ajustes();
@@ -94,6 +104,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    public void alarmaOff(View v) {
+        mp.stop();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -107,6 +122,34 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.contenedor_fragments,new PrincipalFragment()).addToBackStack(null).commit();
+    }
+
+
+
+    public void sendNotification(View view) {
+
+        NotificationCompat.Builder mBuilder =
+                new NotificationCompat.Builder(this);
+
+//Create the intent that’ll fire when the user taps the notification//
+        Intent intent = new Intent(this, MainActivity.class);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
+
+        mBuilder.setContentIntent(pendingIntent);
+
+        mBuilder.setSmallIcon(R.drawable.ic_home_black_24dp);
+        mBuilder.setContentTitle("Alerta De Tsunami");
+        mBuilder.setContentText("Se recomienda alejarse de lugares cercanos al mar");
+
+        NotificationManager mNotificationManager =
+
+                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+
+        mNotificationManager.notify(001, mBuilder.build());
+
+        mp = MediaPlayer.create(this, R.raw.alert);
+        mp.start();
+        mp.setLooping(true);
     }
 
 }

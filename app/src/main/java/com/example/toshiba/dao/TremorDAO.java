@@ -36,4 +36,20 @@ public class TremorDAO {
         }
         return list;
     }
+
+    public TremorBean Actual(){
+        TremorBean objT = null;
+        try {
+            String ruta = "http://tremor.devstec.com/?op=2";
+            conexion_webservice conexion = new conexion_webservice();
+            JSONObject obj = conexion.getData(ruta);
+            objT = new TremorBean();
+            objT.setLatitud(Double.parseDouble(obj.getString("Latitud")));
+            objT.setLongitud(Double.parseDouble(obj.getString("Longitud")));
+            System.out.println(""+objT.getLatitud());
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+        return objT;
+    }
 }

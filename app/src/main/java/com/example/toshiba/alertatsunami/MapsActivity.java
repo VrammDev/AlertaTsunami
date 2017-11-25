@@ -14,6 +14,8 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
 
+import com.example.toshiba.bean.TremorBean;
+import com.example.toshiba.dao.TremorDAO;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -70,11 +72,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         marcador = mMap.addMarker(new MarkerOptions()
                 .position(coordenadas)
                 .title("Mi Posicion Actual ")
-                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_launcher)));
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_launcher_round)));
        //            mMap.animateCamera(miubicacion);
 
-
-        LatLng coordenadas2 = new LatLng(40.67855511, -73.80271912);
+        LatLng coordenadas2 = new LatLng(-15.71, -73.05);
         CameraUpdate miubicacion2 = CameraUpdateFactory.newLatLngZoom(coordenadas2, 16);
         if (marcador2 != null) marcador2.remove();
         marcador2 = mMap.addMarker(new MarkerOptions()

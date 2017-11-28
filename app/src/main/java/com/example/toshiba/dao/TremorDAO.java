@@ -16,7 +16,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public class TremorDAO {
     public ArrayList<TremorBean> ListTremors() {
         ArrayList<TremorBean> list = new ArrayList<TremorBean>();
-        String ruta = "http://10.10.0.81/tremor/?op=1";
+        String ruta = "http://tremor.devstec.com/?op=1";
         try {
             conexion_webservice conexion = new conexion_webservice();
 
